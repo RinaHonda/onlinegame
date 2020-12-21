@@ -62,6 +62,8 @@ export default {
 					  oni:true
 					  })
 		}
+		//プレイヤーが最後の一人になったらその人の画面をゲームクリア
+		//その他の人はゲームオーバー
 		if(this.other.oni){
 		    this.gameclear=true;
 		}else{
@@ -82,6 +84,12 @@ export default {
 		return false
 	    }
 	},
+	//最後まで残るプレイヤーclearer定義？
+	clearer(){
+	    if(this.$store.state.user == !oni){
+			
+	　　}		
+	},	
 	me() {
 	    return this.$store.state.me
 	},
